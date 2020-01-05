@@ -1,2 +1,11 @@
-$(".forecastarea").text("test");
-console.log("test")
+$(".citybtn").on("click", function (event) {
+    event.preventDefault();
+    var city = $(".inputcity").val();
+    console.log(city)
+    console.log("button working")
+    
+})
+
+var city = $(".inputcity").val();
+console.log(city);
+var weatherurl = "api.openweathermap.org/data/2.5/forecast?q=" + city + ",us&appid=ab2b42dffa09ca26ec55a2393bf2aa3d"
