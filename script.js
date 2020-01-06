@@ -6,8 +6,8 @@ $(".citybtn").on("click", function (event) {
 
 function weatherCall() {
     var city =$(".inputcity").val();
-    var curweathurl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + ",us&appid=ab2b42dffa09ca26ec55a2393bf2aa3d"
-    var foreurl = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + ",us&appid=ab2b42dffa09ca26ec55a2393bf2aa3d"
+    var curweathurl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + ",us&units=imperial&appid=ab2b42dffa09ca26ec55a2393bf2aa3d"
+    var foreurl = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + ",us&units=imperial&appid=ab2b42dffa09ca26ec55a2393bf2aa3d"
     $.ajax({
         url: curweathurl,
         method: "GET"
