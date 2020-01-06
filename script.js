@@ -33,7 +33,12 @@ function weatherCall() {
         method: "GET"
     }).then(function (response) {
         console.log(response);
-        $(".day1date").text(response.list[0].dt_txt);
+        $(".day1date").text(response.list[0].dt_txt.split(" ")[0]);
+        $(".day2date").text(response.list[8].dt_txt.split(" ")[0]);
+        $(".day3date").text(response.list[16].dt_txt.split(" ")[0]);
+        $(".day4date").text(response.list[24].dt_txt.split(" ")[0]);
+        $(".day5date").text(response.list[32].dt_txt.split(" ")[0]);
+
     })
 }
 
