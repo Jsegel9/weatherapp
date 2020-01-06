@@ -32,6 +32,16 @@ function weatherCall() {
         url: foreurl,
         method: "GET"
     }).then(function (response) {
+        var day1pic = response.list[5].weather[0].icon;
+        var day2pic = response.list[13].weather[0].icon;
+        var day3pic = response.list[21].weather[0].icon;
+        var day4pic = response.list[29].weather[0].icon;
+        var day5pic = response.list[37].weather[0].icon;
+        var day1src = "http://openweathermap.org/img/wn/" + day1pic + ".png";
+        var day2src = "http://openweathermap.org/img/wn/" + day2pic + ".png";
+        var day3src = "http://openweathermap.org/img/wn/" + day3pic + ".png";
+        var day4src = "http://openweathermap.org/img/wn/" + day4pic + ".png";
+        var day5src = "http://openweathermap.org/img/wn/" + day5pic + ".png";
         console.log(response);
         $(".fivehead").text("Five Day Forecast");
         $(".day1date").text(response.list[5].dt_txt.split(" ")[0]);
@@ -49,6 +59,11 @@ function weatherCall() {
         $(".day3humidity").text(response.list[21].main.humidity + "%");
         $(".day4humidity").text(response.list[29].main.humidity + "%");
         $(".day5humidity").text(response.list[37].main.humidity + "%");
+        $(".day1img").attr("src", day1src);
+        $(".day2img").attr("src", day2src);
+        $(".day3img").attr("src", day3src);
+        $(".day4img").attr("src", day4src);
+        $(".day5img").attr("src", day5src);
     })
 }
 
