@@ -6,3 +6,43 @@ header {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.maincontent {
+    position: relative;
+}
+.searcharea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: orange;
+    margin: 10px;
+    padding: 20px;
+}
+.forecastarea {
+    position: absolute;
+    left: 33%;
+    background-color: orchid;
+}
+.fiveday {
+    position: absolute;
+    left: 33%;
+    top: 300px;
+    width: auto;
+    background-color: purple;
+}
+.fiver {
+    float: left;
+    background-color: seagreen;
+    margin: 10px;
+    padding: 10px;
+}
+.histbtn {
+    padding: 10px;
+    background-color: whitesmoke;
+    border-style: solid;
+    border-width: 1px;
+    border-color: silver;
+    width: 100%;
+    text-align: left;
+    /* margin: 10px; */
+}
