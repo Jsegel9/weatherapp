@@ -34,21 +34,21 @@ function weatherCall() {
     }).then(function (response) {
         console.log(response);
         $(".fivehead").text("Five Day Forecast");
-        $(".day1date").text(response.list[0].dt_txt.split(" ")[0]);
-        $(".day2date").text(response.list[8].dt_txt.split(" ")[0]);
-        $(".day3date").text(response.list[16].dt_txt.split(" ")[0]);
-        $(".day4date").text(response.list[24].dt_txt.split(" ")[0]);
-        $(".day5date").text(response.list[32].dt_txt.split(" ")[0]);
-        $(".day1temp").text(response.list[0].main.temp + "°");
-        $(".day2temp").text(response.list[8].main.temp + "°");
-        $(".day3temp").text(response.list[16].main.temp + "°");
-        $(".day4temp").text(response.list[24].main.temp + "°");
-        $(".day5temp").text(response.list[32].main.temp + "°");
-        $(".day1humidity").text(response.list[0].main.humidity + "%");
-        $(".day2humidity").text(response.list[8].main.humidity + "%");
-        $(".day3humidity").text(response.list[16].main.humidity + "%");
-        $(".day4humidity").text(response.list[24].main.humidity + "%");
-        $(".day5humidity").text(response.list[32].main.humidity + "%");
+        $(".day1date").text(response.list[5].dt_txt.split(" ")[0]);
+        $(".day2date").text(response.list[13].dt_txt.split(" ")[0]);
+        $(".day3date").text(response.list[21].dt_txt.split(" ")[0]);
+        $(".day4date").text(response.list[29].dt_txt.split(" ")[0]);
+        $(".day5date").text(response.list[37].dt_txt.split(" ")[0]);
+        $(".day1temp").text(response.list[5].main.temp + "°");
+        $(".day2temp").text(response.list[13].main.temp + "°");
+        $(".day3temp").text(response.list[21].main.temp + "°");
+        $(".day4temp").text(response.list[29].main.temp + "°");
+        $(".day5temp").text(response.list[37].main.temp + "°");
+        $(".day1humidity").text(response.list[5].main.humidity + "%");
+        $(".day2humidity").text(response.list[13].main.humidity + "%");
+        $(".day3humidity").text(response.list[21].main.humidity + "%");
+        $(".day4humidity").text(response.list[29].main.humidity + "%");
+        $(".day5humidity").text(response.list[37].main.humidity + "%");
     })
 }
 
