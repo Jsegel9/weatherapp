@@ -12,7 +12,8 @@ function weatherCall() {
         method: "GET"
     }).then(function (response) {
         console.log(response);
-        console.log("response")
+        console.log(response.list[0]);
+        console.log(response.list[0].main.temp)
     })
 }
 
