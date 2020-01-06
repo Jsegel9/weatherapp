@@ -1,7 +1,13 @@
 $(".citybtn").on("click", function (event) {
     event.preventDefault();
-    weatherCall()
+    weatherCall();
 })
+
+// $(".histbtn").on("click", function (event) {
+//     event.preventDefault();
+//     // weatherCall2();
+//     console.log((".histbtn").val());
+// })
 
 function weatherCall() {
     var city =$(".inputcity").val();
@@ -22,7 +28,14 @@ function weatherCall() {
         $(".temp").text("Temperature: " + response.main.temp + "°");
         $(".humid").text("Humidity: " + response.main.humidity + "%");
         $(".windspd").text("Wind Speed: " + response.wind.speed + " MPH");
+        $(".uvind").text("UV Index: ");
+        $(".searchhist").append("<button type='button' class='histbtn'></button>");
+        $(".histbtn").text(response.name);
         $(".currentweather").text(JSON.stringify(response));
     })
 }
-
+$(".histbtn").on("click", function (event) {
+    event.preventDefault();
+    // weatherCall2();
+    console.log((".histbtn").text());
+})
