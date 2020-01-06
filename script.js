@@ -33,6 +33,7 @@ function weatherCall() {
         method: "GET"
     }).then(function (response) {
         console.log(response);
+        $(".fivehead").text("Five Day Forecast");
         $(".day1date").text(response.list[0].dt_txt.split(" ")[0]);
         $(".day2date").text(response.list[8].dt_txt.split(" ")[0]);
         $(".day3date").text(response.list[16].dt_txt.split(" ")[0]);
