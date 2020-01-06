@@ -16,9 +16,12 @@ function weatherCall() {
         var foreimg = response.weather[0].icon
         var imgsrc = "http://openweathermap.org/img/wn/" + foreimg + ".png"
         console.log(response);
-        // console.log(response.weather[0].icon);
+        console.log(response.main.temp);
         $(".forecasthead").html(response.name + " (" + date + ")" + "<img src='' class='foreimg'>");
         $(".foreimg").attr("src", imgsrc);
+        $(".temp").text("Temperature: " + response.main.temp + "°");
+        $(".humid").text("Humidity: " + response.main.humidity + "%");
+        $(".windspd").text("Wind Speed: " + response.wind.speed + " MPH");
         $(".currentweather").text(JSON.stringify(response));
     })
 }
